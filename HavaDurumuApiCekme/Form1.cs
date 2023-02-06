@@ -31,16 +31,16 @@ namespace HavaDurumuApiCekme
             bool kontrol = true;
             try
             {
-                 hava = XDocument.Load(bağlantı);
+                hava = XDocument.Load(bağlantı);
             }
             catch (Exception)
             {
                 MessageBox.Show("Lütfen Bir Şehir İsmi Giriniz");
                 kontrol = false;
             }
-            
-            
-            
+
+
+
             var hissedilensicaklik = hava.Descendants("feels_like").ElementAt(0).Attribute("value").Value;
             var sicaklik = hava.Descendants("temperature").ElementAt(0).Attribute("value").Value;
             var ruzgarhizi = hava.Descendants("speed").ElementAt(0).Attribute("value").Value + hava.Descendants("speed").ElementAt(0).Attribute("unit").Value;
@@ -54,10 +54,10 @@ namespace HavaDurumuApiCekme
 
             gundogumu = gundogumu.Substring(11, 8);
             gunbatimi = gunbatimi.Substring(11, 8);
-           
+
 
             int artirilankisim = Convert.ToInt32(gundogumu.Substring(0, 2));
-            if (artirilankisim<21)
+            if (artirilankisim < 21)
             {
 
                 string[] timeParts = gundogumu.Split(':');
@@ -114,7 +114,7 @@ namespace HavaDurumuApiCekme
                         break;
                 }
             }
-            if (kontrol==true)
+            if (kontrol == true)
             {
                 labelSicaklik.Text = "Sıcaklık: " + sicaklik + "°C";
                 labelHissedilenSicaklik.Text = "Hissedilen Sıcaklık: " + hissedilensicaklik + "°C";
@@ -127,7 +127,7 @@ namespace HavaDurumuApiCekme
                 labelBulutDurumu.Text = "Bulut Durumu: " + bulutdurumu;
                 labelBasınç.Text = "Basınç: " + basinc;
             }
-            else if (kontrol==false)
+            else if (kontrol == false)
             {
                 labelSicaklik.Text = "";
                 labelHissedilenSicaklik.Text = "";
@@ -141,32 +141,6 @@ namespace HavaDurumuApiCekme
                 labelBasınç.Text = "";
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void labelSehir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelNem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

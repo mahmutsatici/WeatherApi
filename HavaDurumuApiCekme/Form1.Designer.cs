@@ -49,7 +49,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(247, 28);
             this.textBox1.TabIndex = 10;
-            this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // labelSehir
@@ -62,7 +61,6 @@
             this.labelSehir.TabIndex = 0;
             this.labelSehir.Text = "Şehir:";
             this.labelSehir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelSehir.Click += new System.EventHandler(this.labelSehir_Click);
             // 
             // labelHavaDurumu
             // 
@@ -118,7 +116,6 @@
             this.labelNem.TabIndex = 5;
             this.labelNem.Text = "Nem:";
             this.labelNem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelNem.Click += new System.EventHandler(this.labelNem_Click);
             // 
             // labelBasınç
             // 
@@ -152,7 +149,6 @@
             this.labelRuzgarHizi.TabIndex = 8;
             this.labelRuzgarHizi.Text = "Rüzgar Hızı:";
             this.labelRuzgarHizi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelRuzgarHizi.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelGunBatimi
             // 
